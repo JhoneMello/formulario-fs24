@@ -8,23 +8,27 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <form>
+    <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="ea601d70-961d-4be1-8007-9c4bf9b20185">
+
         <h1>Entre em <span>Contato</span></h1>
 
         <div>
-            <input type="text" placeholder="Nome">
-            <input type="email" placeholder="E-mail">
+            <input type="text" placeholder="Nome" name="Nome">
+            <input type="email" placeholder="E-mail" name="email">
         </div>
 
         <div>
-            <input type="text" placeholder="Telefone">
-            <input type="text" placeholder="Assunto">
+            <input type="text" placeholder="Telefone" name="telefone">
+            <input type="text" placeholder="Assunto" name="assunto">
             <!-- Alterar o Assunto para Select -->
         </div>
 
-        <textarea></textarea>
+        <textarea placeholder="Menssagem" name="mensagem"></textarea>
+         <!-- Honeypot Spam Protection -->
+        <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
 
-        <button>Enviar Mensagem</button>
+        <button type="submit">Enviar Mensagem</button>
     </form>
 </body>
 </html>
